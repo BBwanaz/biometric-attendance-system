@@ -1,12 +1,15 @@
 #define F_CPU 8000000UL
+#include <stdio.h>
 #include <avr/io.h>
 #include <util/delay.h>
-#include "lcd.h" //Can be download from the bottom of this article
+#include "lcd.h" 
 #include <avr/interrupt.h>
 
 #define USART_BAUDRATE 9600
 #define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 
+#define uchar unsigned char
+#define uint unsigned int
 
 #define D4 eS_PORTD5
 #define D5 eS_PORTD6
@@ -15,12 +18,22 @@
 #define RS eS_PORTB6
 #define EN eS_PORTB7
 
-#define enroll eS_PORTC0
-#define match  eS_PORTB2
-#define delete eS_PORTC1
-#define up     eS_PORTC2
-#define down   eS_PORTB2
-#define ok     eS_PORTC1
+#define enroll !((PINC &(1<<PC0))>>PC0)
+#define match  !((PINB & (1<<PB2))>>PB2)
+#define delete !((PINC &(1<<PC1))>>PC1)
+#define up     !((PINC & (1<<PC2))>>PC2)
+#define down   !((PINB & (1<<PB2))>>PB2)
+#define ok     !((PINC &(1<<PC1))>>PC1)
+
+#define CHANGE_DATE_TIME !((PIND & (1<<PD2))>>PD2)
+#define SELECT_DATE !((PINC &(1<<PC0))>>PC0)
+#define SELECT_TIME !((PINC &(1<<PC1))>>PC1)
+#define CYCLE !((PINC & (1<<PC0))>>PC0)
+#define INC_ONE !((PINC & (1<<PC1))>>PC1)
+#define INC_FIVE !((PINC & (1<<PC2))>>PC2)
+#define DEC_ONE !((PINB & (1<<PB2))>>PB2)
+#define RETURN !(PIND & (1<<PD2))>>PD2)
+
 
 #define BUZZER eS_PORTB1
 #define LED    eS_PORTC3
@@ -216,49 +229,89 @@ TWDR=0x00;                                        // word address write
 TWCR=(1<<TWINT)|(1<<TWEN);
 while(!(TWCR&(1<<TWINT)));
 }
+
+
+void change_date(){
+ uchar date = timeStamp[3];
+ uchar month = timeStamp[4];
+ uchar year = timeStamp[5];
+
+ Lcd4_Clear();
+ Lcd4_Write_String("Hi");
+ _delay_ms(5000);
+
+
+}
+
+void change_time(){
+
+}
  
-void RTCTimeSet()
+void RTC_Change_Time()
 {
-RTC_start();
-device();
+ 
+ RTC_start();
+ device();
+ Lcd4_Clear();
+ 
+ 
+
+ while(1){
+    Lcd4_Set_Cursor(1,0);
+    Lcd4_Write_String("Press 1 for time");
+    Lcd4_Set_Cursor(2,0);
+    Lcd4_Write_String("Press 2 for date");
+     if(SELECT_DATE){
+         while(SELECT_DATE);
+         change_date();
+         RTC_stp();
+         return;
+     }else if(SELECT_TIME){
+         while(SELECT_TIME);
+         change_time();
+         RTC_stp();
+         return;
+     }
+ }
+
+
 sec_init(0);
-min_init(0x47);
+min_init(0x00);
 hr_init(0x22);
 day_init(0x03);
 date_init(0x23);
 month_init(0x08);
 yr_init(0x19);
-RTC_stp();
 }
  
 void show()
 {
 char tem[20];
 sprintf(tem,"%d",timeStamp[0]);
-lcdwrite(0x80,CMD);
-lcdprint("Time:");
-lcdprint(tem);
-lcdwrite(':',DATA);
+Lcd4_Set_Cursor(1,0);
+ Lcd4_Write_String("Time:");
+ Lcd4_Write_String(tem);
+ Lcd4_Write_String(":");
 sprintf(tem,"%d",timeStamp[1]);
-lcdprint(tem);
-lcdwrite(':',DATA);
+ Lcd4_Write_String(tem);
+ Lcd4_Write_String(":");
 sprintf(tem,"%d",timeStamp[2]);
-lcdprint(tem);
-lcdprint("  ");
-lcdwrite(0xc0,CMD);
-lcdprint("Date:");
+ Lcd4_Write_String(tem);
+ Lcd4_Write_String("  ");
+ Lcd4_Set_Cursor(2,0);
+ Lcd4_Write_String("Date:");
 sprintf(tem,"%d",timeStamp[3]);
-lcdprint(tem);
-lcdwrite('/',DATA);
+ Lcd4_Write_String(tem);
+ Lcd4_Write_String("/");
 sprintf(tem,"%d",timeStamp[4]);
-lcdprint(tem);
-lcdwrite('/',DATA);
+ Lcd4_Write_String(tem);
+ Lcd4_Write_String("/");
 sprintf(tem,"%d",timeStamp[5]);
-lcdprint("20");
+ Lcd4_Write_String("20");
 if(timeStamp[5]<10)
-lcdwrite('0',DATA);
-lcdprint(tem);
-lcdprint("   ");
+ Lcd4_Write_String(0);
+ Lcd4_Write_String(tem);
+ Lcd4_Write_String("   ");
 }
  
 void RTC()
@@ -273,4 +326,32 @@ timeStamp[4]=month_rw();
 timeStamp[5]=yr_rw();
 RTC_stp();
 show();
+}
+
+
+int main(void)
+{
+    DDRB |=0xC3;
+    PORTB |=0x04; //Activating the pull up resistor
+    DDRC|=0x00;
+    PORTC|=0x07;
+	DDRD |=0xE2;
+    PORTD |=0x04; //Activating the pull up resistor
+    char word[20];
+	
+
+	Lcd4_Init();
+	Lcd4_Clear();
+    Lcd4_Set_Cursor(1,0);
+	
+    while(1){
+
+        RTC();
+       if(CHANGE_DATE_TIME){
+           while(CHANGE_DATE_TIME);
+           RTC_Change_Time();
+       }
+   
+       
+    }
 }
