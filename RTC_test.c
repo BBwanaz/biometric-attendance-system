@@ -55,6 +55,15 @@
 #define maxId 5
 #define dataLenth 6
 #define eepStartAdd 1
+//==============================================================================================================================================================================
+// TIME INITIALIZERS
+
+uchar hr_var = 0x22
+uchar min_var = 0x00
+uchar sec_var = 0x00
+
+
+//==============================================================================================================================================================================
 
 uchar buf[20];
 uchar buf1[20];
@@ -245,6 +254,8 @@ void change_date(){
 
 void change_time(){
 
+// Create state machine for time changes
+
 }
  
 void RTC_Change_Time()
@@ -253,6 +264,11 @@ void RTC_Change_Time()
  RTC_start();
  device();
  Lcd4_Clear();
+
+ //READ CURRENT TIME
+ hr_var = hr_rw;
+ min_var = min_rw;
+ sec_var = 0x00
  
  
 
@@ -275,9 +291,9 @@ void RTC_Change_Time()
  }
 
 
-sec_init(0);
-min_init(0x00);
-hr_init(0x22);
+sec_init(sec_var);
+min_init(min_var);
+hr_init(hr_var);
 day_init(0x03);
 date_init(0x23);
 month_init(0x08);
