@@ -28,7 +28,9 @@
 #define CHANGE_DATE_TIME !((PIND & (1<<PD2))>>PD2)
 #define SELECT_DATE !((PINC &(1<<PC0))>>PC0)
 #define SELECT_TIME !((PINC &(1<<PC1))>>PC1)
-#define CYCLE !((PINC & (1<<PC0))>>PC0)
+#define INC_DATE !((PINC & (1<<PC0))>>PC0)
+#define INC_MONTH !((PINC & (1<<PC1))>>PC1)
+#define INC_YEAR !((PINC & (1<<PC2))>>PC2)
 #define INC_ONE !((PINC & (1<<PC1))>>PC1)
 #define INC_FIVE !((PINC & (1<<PC2))>>PC2)
 #define DEC_ONE !((PINB & (1<<PB2))>>PB2)
@@ -55,15 +57,6 @@
 #define maxId 5
 #define dataLenth 6
 #define eepStartAdd 1
-//==============================================================================================================================================================================
-// TIME INITIALIZERS
-
-uchar hr_var = 0x22
-uchar min_var = 0x00
-uchar sec_var = 0x00
-
-
-//==============================================================================================================================================================================
 
 uchar buf[20];
 uchar buf1[20];
@@ -94,6 +87,7 @@ enum
  CMD=0,
  DATA, 
 };
+
 
 int bcdtochar(char num)
 {
@@ -240,66 +234,24 @@ while(!(TWCR&(1<<TWINT)));
 }
 
 
-void change_date(){
- uchar date = timeStamp[3];
- uchar month = timeStamp[4];
- uchar year = timeStamp[5];
-
- Lcd4_Clear();
- Lcd4_Write_String("Hi");
- _delay_ms(5000);
-
-
-}
-
-void change_time(){
-
-// Create state machine for time changes
-
-}
- 
-void RTC_Change_Time()
+void RTCTimeSet()
 {
- 
- RTC_start();
- device();
- Lcd4_Clear();
-
- //READ CURRENT TIME
- hr_var = hr_rw;
- min_var = min_rw;
- sec_var = 0x00
- 
- 
-
- while(1){
-    Lcd4_Set_Cursor(1,0);
-    Lcd4_Write_String("Press 1 for time");
-    Lcd4_Set_Cursor(2,0);
-    Lcd4_Write_String("Press 2 for date");
-     if(SELECT_DATE){
-         while(SELECT_DATE);
-         change_date();
-         RTC_stp();
-         return;
-     }else if(SELECT_TIME){
-         while(SELECT_TIME);
-         change_time();
-         RTC_stp();
-         return;
-     }
- }
+  RTC_start();
+  device();
+  sec_init(0);
+  min_init(0x49);
+  hr_init(0x22);
+  day_init(0x01);
+  date_init(0x16);
+  month_init(0x08);
+  yr_init(0x20);
+  RTC_stp();
 
 
-sec_init(sec_var);
-min_init(min_var);
-hr_init(hr_var);
-day_init(0x03);
-date_init(0x23);
-month_init(0x08);
-yr_init(0x19);
 }
+
  
+
 void show()
 {
 char tem[20];
@@ -325,7 +277,7 @@ sprintf(tem,"%d",timeStamp[4]);
 sprintf(tem,"%d",timeStamp[5]);
  Lcd4_Write_String("20");
 if(timeStamp[5]<10)
- Lcd4_Write_String(0);
+ Lcd4_Write_String("0");
  Lcd4_Write_String(tem);
  Lcd4_Write_String("   ");
 }
@@ -351,22 +303,19 @@ int main(void)
     PORTB |=0x04; //Activating the pull up resistor
     DDRC|=0x00;
     PORTC|=0x07;
-	DDRD |=0xE2;
+	  DDRD |=0xE2;
     PORTD |=0x04; //Activating the pull up resistor
     char word[20];
 	
 
-	Lcd4_Init();
-	Lcd4_Clear();
-    Lcd4_Set_Cursor(1,0);
-	
+	 Lcd4_Init();
+	 Lcd4_Clear();
+   Lcd4_Set_Cursor(1,0);
+
+    RTCTimeSet();
     while(1){
 
         RTC();
-       if(CHANGE_DATE_TIME){
-           while(CHANGE_DATE_TIME);
-           RTC_Change_Time();
-       }
    
        
     }
