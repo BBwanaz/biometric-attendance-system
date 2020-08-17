@@ -159,7 +159,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0xf70
+.text           0x0000000000000000      0xdc2
  *(.vectors)
  .vectors       0x0000000000000000       0x68 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vector_default
@@ -242,147 +242,144 @@ END GROUP
                 0x00000000000000a2                __vector_16
                 0x00000000000000a2                __vector_18
                 0x00000000000000a2                __vector_20
- .text          0x00000000000000a6      0x8de RTC_test.o
+ .text          0x00000000000000a6      0x738 RTC_test.o
                 0x00000000000000a6                pinChange
                 0x0000000000000276                Lcd4_Port
                 0x00000000000002cc                Lcd4_Cmd
-                0x0000000000000334                Lcd4_Clear
-                0x0000000000000340                Lcd4_Set_Cursor
-                0x0000000000000372                Lcd4_Init
-                0x00000000000003d8                Lcd4_Write_Char
-                0x0000000000000462                Lcd4_Write_String
-                0x000000000000047a                Lcd4_Shift_Right
-                0x0000000000000486                Lcd4_Shift_Left
-                0x0000000000000492                bcdtochar
-                0x00000000000004c8                RTC_start
-                0x00000000000004d8                RTC_stp
-                0x00000000000004e0                RTC_read
-                0x0000000000000538                sec_init
-                0x000000000000054c                min_init
-                0x0000000000000550                hr_init
-                0x0000000000000554                day_init
-                0x0000000000000558                date_init
-                0x000000000000055c                month_init
-                0x0000000000000560                yr_init
-                0x0000000000000564                sec_rw
-                0x000000000000057e                min_rw
-                0x00000000000005a2                hr_rw
-                0x00000000000005a6                day_rd
-                0x00000000000005aa                date_rw
-                0x00000000000005ae                month_rw
-                0x00000000000005b2                yr_rw
-                0x00000000000005d6                device
-                0x00000000000005fe                RTCTimeSet
-                0x0000000000000638                change_date
-                0x0000000000000760                change_time
-                0x0000000000000762                RTC_Change_Time
-                0x00000000000007c2                show
-                0x000000000000092e                RTC
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(fputc.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .text          0x0000000000000984        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
-                0x0000000000000984                . = ALIGN (0x2)
+                0x0000000000000316                Lcd4_Clear
+                0x0000000000000322                Lcd4_Set_Cursor
+                0x0000000000000350                Lcd4_Init
+                0x00000000000003b6                Lcd4_Write_Char
+                0x0000000000000440                Lcd4_Write_String
+                0x0000000000000458                Lcd4_Shift_Right
+                0x0000000000000464                Lcd4_Shift_Left
+                0x0000000000000470                bcdtochar
+                0x00000000000004a6                RTC_start
+                0x00000000000004b6                RTC_stp
+                0x00000000000004be                RTC_read
+                0x0000000000000516                sec_init
+                0x000000000000052a                min_init
+                0x000000000000052e                hr_init
+                0x0000000000000532                day_init
+                0x0000000000000536                date_init
+                0x000000000000053a                month_init
+                0x000000000000053e                yr_init
+                0x0000000000000542                sec_rw
+                0x000000000000055c                min_rw
+                0x0000000000000580                hr_rw
+                0x0000000000000584                day_rd
+                0x0000000000000588                date_rw
+                0x000000000000058c                month_rw
+                0x0000000000000590                yr_rw
+                0x00000000000005b4                device
+                0x00000000000005dc                RTCTimeSet
+                0x0000000000000616                show
+                0x0000000000000788                RTC
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .text          0x00000000000007de        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x00000000000007de                . = ALIGN (0x2)
  *(.text.*)
- .text.startup  0x0000000000000984       0x3c RTC_test.o
-                0x0000000000000984                main
+ .text.startup  0x00000000000007de       0x34 RTC_test.o
+                0x00000000000007de                main
  .text.libgcc.mul
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.div
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x00000000000009c0        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000000000000812        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
  .text.avr-libc
-                0x00000000000009c0       0x46 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
-                0x00000000000009c0                sprintf
+                0x0000000000000812       0x46 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+                0x0000000000000812                sprintf
  .text.avr-libc
-                0x0000000000000a06      0x3b0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
-                0x0000000000000a06                vfprintf
+                0x0000000000000858      0x3b0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                0x0000000000000858                vfprintf
  .text.avr-libc
-                0x0000000000000db6       0x16 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
-                0x0000000000000db6                strnlen_P
+                0x0000000000000c08       0x16 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x0000000000000c08                strnlen_P
  .text.avr-libc
-                0x0000000000000dcc       0x16 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
-                0x0000000000000dcc                strnlen
+                0x0000000000000c1e       0x16 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x0000000000000c1e                strnlen
  .text.avr-libc
-                0x0000000000000de2       0x60 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(fputc.o)
-                0x0000000000000de2                fputc
+                0x0000000000000c34       0x60 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x0000000000000c34                fputc
  .text.avr-libc
-                0x0000000000000e42       0xbc c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
-                0x0000000000000e42                __ultoa_invert
+                0x0000000000000c94       0xbc c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x0000000000000c94                __ultoa_invert
  .text.libgcc.mul
-                0x0000000000000efe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000d50        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.div
-                0x0000000000000efe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .text.libgcc   0x0000000000000efe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000d50        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .text.libgcc   0x0000000000000d50        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.prologue
-                0x0000000000000efe       0x38 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
-                0x0000000000000efe                __prologue_saves__
+                0x0000000000000d50       0x38 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000d50                __prologue_saves__
  .text.libgcc.builtins
-                0x0000000000000f36        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000d88        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.fmul
-                0x0000000000000f36        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000d88        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.fixed
-                0x0000000000000f36        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000d88        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.mul
-                0x0000000000000f36        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000d88        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.div
-                0x0000000000000f36        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
- .text.libgcc   0x0000000000000f36        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000d88        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .text.libgcc   0x0000000000000d88        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.prologue
-                0x0000000000000f36       0x36 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
-                0x0000000000000f36                __epilogue_restores__
+                0x0000000000000d88       0x36 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000d88                __epilogue_restores__
  .text.libgcc.builtins
-                0x0000000000000f6c        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000dbe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.fmul
-                0x0000000000000f6c        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000dbe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.fixed
-                0x0000000000000f6c        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
-                0x0000000000000f6c                . = ALIGN (0x2)
+                0x0000000000000dbe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000dbe                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000f6c        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
-                0x0000000000000f6c                _exit
-                0x0000000000000f6c                exit
+ .fini9         0x0000000000000dbe        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000dbe                _exit
+                0x0000000000000dbe                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -401,17 +398,17 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000f6c        0x4 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000000000000dbe        0x4 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
  *(.hightext)
  *(.hightext*)
  *(.progmemx.*)
-                0x0000000000000f70                . = ALIGN (0x2)
+                0x0000000000000dc2                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
-                0x0000000000000f70                _etext = .
+                0x0000000000000dc2                _etext = .
 
-.data           0x0000000000800100       0xbe load address 0x0000000000000f70
+.data           0x0000000000800100       0x8e load address 0x0000000000000dc2
                 0x0000000000800100                PROVIDE (__data_start = .)
  *(.data)
  .data          0x0000000000800100        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
@@ -443,54 +440,54 @@ END GROUP
                 0x0000000000800166                passPack
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000800176       0x48 RTC_test.o
-                                         0x4f (size before relaxing)
+                0x0000000000800176       0x18 RTC_test.o
+                                         0x1f (size before relaxing)
  *(.gnu.linkonce.r*)
-                0x00000000008001be                . = ALIGN (0x2)
-                0x00000000008001be                _edata = .
-                0x00000000008001be                PROVIDE (__data_end = .)
+                0x000000000080018e                . = ALIGN (0x2)
+                0x000000000080018e                _edata = .
+                0x000000000080018e                PROVIDE (__data_end = .)
 
-.bss            0x00000000008001be       0x52
-                0x00000000008001be                PROVIDE (__bss_start = .)
+.bss            0x000000000080018e       0x52
+                0x000000000080018e                PROVIDE (__bss_start = .)
  *(.bss)
- .bss           0x00000000008001be        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .bss           0x00000000008001be        0x4 RTC_test.o
-                0x00000000008001be                count
-                0x00000000008001c0                msCount
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(fputc.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .bss           0x00000000008001c2        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .bss           0x000000000080018e        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x000000000080018e        0x4 RTC_test.o
+                0x000000000080018e                count
+                0x0000000000800190                msCount
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .bss           0x0000000000800192        0x0 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x00000000008001c2       0x4e RTC_test.o
-                0x00000000008001c2                b
-                0x00000000008001c4                timeStamp
-                0x00000000008001d2                flag
-                0x00000000008001d4                ind
-                0x00000000008001d6                buf1
-                0x00000000008001ea                c
-                0x00000000008001ec                data
-                0x00000000008001f6                s
-                0x00000000008001f8                day
-                0x00000000008001fa                buf
-                0x000000000080020e                a
-                0x0000000000800210                PROVIDE (__bss_end = .)
-                0x0000000000000f70                __data_load_start = LOADADDR (.data)
-                0x000000000000102e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000800192       0x4e RTC_test.o
+                0x0000000000800192                b
+                0x0000000000800194                timeStamp
+                0x00000000008001a2                flag
+                0x00000000008001a4                ind
+                0x00000000008001a6                buf1
+                0x00000000008001ba                c
+                0x00000000008001bc                data
+                0x00000000008001c6                s
+                0x00000000008001c8                day
+                0x00000000008001ca                buf
+                0x00000000008001de                a
+                0x00000000008001e0                PROVIDE (__bss_end = .)
+                0x0000000000000dc2                __data_load_start = LOADADDR (.data)
+                0x0000000000000e50                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800210        0x0
+.noinit         0x00000000008001e0        0x0
                 [!provide]                        PROVIDE (__noinit_start = .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end = .)
-                0x0000000000800210                _end = .
+                0x00000000008001e0                _end = .
                 [!provide]                        PROVIDE (__heap_start = .)
 
 .eeprom         0x0000000000810000        0x0
@@ -573,54 +570,54 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1c21
+.debug_info     0x0000000000000000     0x189c
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4     0x156f RTC_test.o
- .debug_info    0x0000000000001b63       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .debug_info    0x0000000000001b89       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .debug_info    0x0000000000001baf       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .debug_info    0x0000000000001bd5       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .debug_info    0x0000000000001bfb       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .debug_info    0x00000000000005f4     0x11ea RTC_test.o
+ .debug_info    0x00000000000017de       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .debug_info    0x0000000000001804       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .debug_info    0x000000000000182a       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_info    0x0000000000001850       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .debug_info    0x0000000000001876       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
-.debug_abbrev   0x0000000000000000      0xa6b
+.debug_abbrev   0x0000000000000000      0xa33
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2      0x465 RTC_test.o
- .debug_abbrev  0x0000000000000a07       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .debug_abbrev  0x0000000000000a1b       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .debug_abbrev  0x0000000000000a2f       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .debug_abbrev  0x0000000000000a43       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .debug_abbrev  0x0000000000000a57       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .debug_abbrev  0x00000000000005a2      0x42d RTC_test.o
+ .debug_abbrev  0x00000000000009cf       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .debug_abbrev  0x00000000000009e3       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .debug_abbrev  0x00000000000009f7       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x0000000000000a0b       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .debug_abbrev  0x0000000000000a1f       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
-.debug_line     0x0000000000000000     0x1c9d
+.debug_line     0x0000000000000000     0x1927
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1d c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x000000000000001d     0x190f RTC_test.o
- .debug_line    0x000000000000192c       0x61 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .debug_line    0x000000000000198d       0x97 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .debug_line    0x0000000000001a24       0x85 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .debug_line    0x0000000000001aa9       0xfd c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .debug_line    0x0000000000001ba6       0xf7 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .debug_line    0x000000000000001d     0x1599 RTC_test.o
+ .debug_line    0x00000000000015b6       0x61 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .debug_line    0x0000000000001617       0x97 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .debug_line    0x00000000000016ae       0x85 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_line    0x0000000000001733       0xfd c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .debug_line    0x0000000000001830       0xf7 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
-.debug_frame    0x0000000000000000      0x2fc
+.debug_frame    0x0000000000000000      0x280
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x2fc RTC_test.o
+ .debug_frame   0x0000000000000000      0x280 RTC_test.o
 
-.debug_str      0x0000000000000000      0x584
+.debug_str      0x0000000000000000      0x54c
  *(.debug_str)
  .debug_str     0x0000000000000000      0x20b c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_str     0x000000000000020b      0x317 RTC_test.o
-                                        0x35f (size before relaxing)
- .debug_str     0x0000000000000522       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .debug_str     0x0000000000000584       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .debug_str     0x0000000000000584       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .debug_str     0x0000000000000584       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .debug_str     0x0000000000000584       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .debug_str     0x000000000000020b      0x2df RTC_test.o
+                                        0x322 (size before relaxing)
+ .debug_str     0x00000000000004ea       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .debug_str     0x000000000000054c       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .debug_str     0x000000000000054c       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_str     0x000000000000054c       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .debug_str     0x000000000000054c       0x62 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
-.debug_loc      0x0000000000000000      0x885
+.debug_loc      0x0000000000000000      0x6a0
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x885 RTC_test.o
+ .debug_loc     0x0000000000000000      0x6a0 RTC_test.o
 
 .debug_macinfo
  *(.debug_macinfo)

@@ -88,6 +88,7 @@ enum
  DATA, 
 };
 
+
 int bcdtochar(char num)
 {
 return ((num/16 * 10) + (num % 16));
@@ -236,109 +237,17 @@ void RTCTimeSet()
 {
 RTC_start();
 device();
-
 sec_init(0);
-min_init(0x47);
+min_init(0x49);
 hr_init(0x22);
-day_init(0x00);
-date_init(0x23);
+day_init(0x01);
+date_init(0x16);
 month_init(0x08);
-yr_init(0x19);
-
+yr_init(0x20);
 RTC_stp();
 }
-
-
-void change_date(){
- uchar date = 0x01;
- uchar month = 0x01;
- uchar year = 0x00;
- char buff[20];
-
- Lcd4_Clear();
- Lcd4_Set_Cursor(1,0);
- Lcd4_Write_String("Changing date");
  
- while(1){
-     Lcd4_Set_Cursor(2,0);
-     sprintf(buff,"%d",date);
-     Lcd4_Write_String(buff);
-     Lcd4_Write_String("/");
-     sprintf(buff,"%d",month);
-     Lcd4_Write_String(buff);
-     Lcd4_Write_String("/");
 
-     sprintf(buff,"%d",year);
-     Lcd4_Write_String("20");
-     if(year<10)
-     Lcd4_Write_String("0");
-     Lcd4_Write_String(buff);
-
-    if(INC_DATE){
-        while(INC_DATE);
-        date+=0x01;
-        date_init(date);
-    }
-    if(INC_MONTH){
-        while(INC_MONTH);
-        month+=0x01;
-        if(month==13){
-            month=0x01;
-        }
-        month_init(month);
-    }
-    if(INC_YEAR){
-        while(INC_YEAR);
-        year+=0x01;
-        yr_init(year);
-    }
-    if(CHANGE_DATE_TIME){
-        while(CHANGE_DATE_TIME);
-        return;
-    }
-
-}
-}
-
-void change_time(){
-
-}
- 
-void RTC_Change_Time()
-{
- 
- RTC_start();
- device();
- Lcd4_Clear();
- 
- sec_init(0);
- min_init(0x00);
- hr_init(0x22);
- day_init(0x00);
-
- while(1){
-    Lcd4_Set_Cursor(1,0);
-    Lcd4_Write_String("Press 1 for date");
-    Lcd4_Set_Cursor(2,0);
-    Lcd4_Write_String("Press 2 for time");
-     if(SELECT_DATE){
-         while(SELECT_DATE);
-         change_date();
-         RTC_stp();
-         return;
-     }else if(SELECT_TIME){
-         while(SELECT_TIME);
-         change_time();
-         RTC_stp();
-         return;
-     }
- }
-
-
-
-
-}
- 
 void show()
 {
 char tem[20];
@@ -399,13 +308,10 @@ int main(void)
 	Lcd4_Clear();
     Lcd4_Set_Cursor(1,0);
 
+    RTCTimeSet();
     while(1){
 
         RTC();
-       if(CHANGE_DATE_TIME){
-           while(CHANGE_DATE_TIME);
-           RTC_Change_Time();
-       }
    
        
     }
