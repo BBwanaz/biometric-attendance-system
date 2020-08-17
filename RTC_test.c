@@ -351,10 +351,7 @@ void RTC_Change_Time()
  }
 
 
-<<<<<<< HEAD
 
-
-=======
 sec_init(sec_var);
 min_init(min_var);
 hr_init(hr_var);
@@ -362,7 +359,6 @@ day_init(0x03);
 date_init(0x23);
 month_init(0x08);
 yr_init(0x19);
->>>>>>> 622d611634888c288a1395966700f9fd2d9aa77e
 }
  
 void show()
