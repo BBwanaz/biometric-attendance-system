@@ -28,7 +28,9 @@
 #define CHANGE_DATE_TIME !((PIND & (1<<PD2))>>PD2)
 #define SELECT_DATE !((PINC &(1<<PC0))>>PC0)
 #define SELECT_TIME !((PINC &(1<<PC1))>>PC1)
-#define CYCLE !((PINC & (1<<PC0))>>PC0)
+#define INC_DATE !((PINC & (1<<PC0))>>PC0)
+#define INC_MONTH !((PINC & (1<<PC1))>>PC1)
+#define INC_YEAR !((PINC & (1<<PC2))>>PC2)
 #define INC_ONE !((PINC & (1<<PC1))>>PC1)
 #define INC_FIVE !((PINC & (1<<PC2))>>PC2)
 #define DEC_ONE !((PINB & (1<<PB2))>>PB2)
@@ -239,17 +241,72 @@ TWCR=(1<<TWINT)|(1<<TWEN);
 while(!(TWCR&(1<<TWINT)));
 }
 
+void RTCTimeSet()
+{
+RTC_start();
+device();
+
+sec_init(0);
+min_init(0x47);
+hr_init(0x22);
+day_init(0x00);
+date_init(0x23);
+month_init(0x08);
+yr_init(0x19);
+
+RTC_stp();
+}
+
 
 void change_date(){
- uchar date = timeStamp[3];
- uchar month = timeStamp[4];
- uchar year = timeStamp[5];
+ uchar date = 0x01;
+ uchar month = 0x01;
+ uchar year = 0x00;
+ char buff[20];
 
  Lcd4_Clear();
- Lcd4_Write_String("Hi");
- _delay_ms(5000);
+ Lcd4_Set_Cursor(1,0);
+ Lcd4_Write_String("Changing date");
+ 
+ while(1){
+     Lcd4_Set_Cursor(2,0);
+     sprintf(buff,"%d",date);
+     Lcd4_Write_String(buff);
+     Lcd4_Write_String("/");
+     sprintf(buff,"%d",month);
+     Lcd4_Write_String(buff);
+     Lcd4_Write_String("/");
 
+     sprintf(buff,"%d",year);
+     Lcd4_Write_String("20");
+     if(year<10)
+     Lcd4_Write_String("0");
+     Lcd4_Write_String(buff);
 
+    if(INC_DATE){
+        while(INC_DATE);
+        date+=0x01;
+        date_init(date);
+    }
+    if(INC_MONTH){
+        while(INC_MONTH);
+        month+=0x01;
+        if(month==13){
+            month=0x01;
+        }
+        month_init(month);
+    }
+    if(INC_YEAR){
+        while(INC_YEAR);
+        year+=0x01;
+        yr_init(year);
+    }
+    if(CHANGE_DATE_TIME){
+        while(CHANGE_DATE_TIME);
+        return;
+    }
+
+}
 }
 
 void change_time(){
@@ -270,13 +327,16 @@ void RTC_Change_Time()
  min_var = min_rw;
  sec_var = 0x00
  
- 
+ sec_init(0);
+ min_init(0x00);
+ hr_init(0x22);
+ day_init(0x00);
 
  while(1){
     Lcd4_Set_Cursor(1,0);
-    Lcd4_Write_String("Press 1 for time");
+    Lcd4_Write_String("Press 1 for date");
     Lcd4_Set_Cursor(2,0);
-    Lcd4_Write_String("Press 2 for date");
+    Lcd4_Write_String("Press 2 for time");
      if(SELECT_DATE){
          while(SELECT_DATE);
          change_date();
@@ -289,6 +349,7 @@ void RTC_Change_Time()
          return;
      }
  }
+
 
 
 sec_init(sec_var);
@@ -325,7 +386,7 @@ sprintf(tem,"%d",timeStamp[4]);
 sprintf(tem,"%d",timeStamp[5]);
  Lcd4_Write_String("20");
 if(timeStamp[5]<10)
- Lcd4_Write_String(0);
+ Lcd4_Write_String("0");
  Lcd4_Write_String(tem);
  Lcd4_Write_String("   ");
 }
@@ -359,7 +420,7 @@ int main(void)
 	Lcd4_Init();
 	Lcd4_Clear();
     Lcd4_Set_Cursor(1,0);
-	
+
     while(1){
 
         RTC();
