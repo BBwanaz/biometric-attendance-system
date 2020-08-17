@@ -233,19 +233,23 @@ TWCR=(1<<TWINT)|(1<<TWEN);
 while(!(TWCR&(1<<TWINT)));
 }
 
+
 void RTCTimeSet()
 {
-RTC_start();
-device();
-sec_init(0);
-min_init(0x49);
-hr_init(0x22);
-day_init(0x01);
-date_init(0x16);
-month_init(0x08);
-yr_init(0x20);
-RTC_stp();
+  RTC_start();
+  device();
+  sec_init(0);
+  min_init(0x49);
+  hr_init(0x22);
+  day_init(0x01);
+  date_init(0x16);
+  month_init(0x08);
+  yr_init(0x20);
+  RTC_stp();
+
+
 }
+
  
 
 void show()
@@ -299,14 +303,14 @@ int main(void)
     PORTB |=0x04; //Activating the pull up resistor
     DDRC|=0x00;
     PORTC|=0x07;
-	DDRD |=0xE2;
+	  DDRD |=0xE2;
     PORTD |=0x04; //Activating the pull up resistor
     char word[20];
 	
 
-	Lcd4_Init();
-	Lcd4_Clear();
-    Lcd4_Set_Cursor(1,0);
+	 Lcd4_Init();
+	 Lcd4_Clear();
+   Lcd4_Set_Cursor(1,0);
 
     RTCTimeSet();
     while(1){
