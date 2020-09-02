@@ -570,15 +570,15 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x189c
+.debug_info     0x0000000000000000     0x189d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4     0x11ea RTC_test.o
- .debug_info    0x00000000000017de       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .debug_info    0x0000000000001804       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .debug_info    0x000000000000182a       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .debug_info    0x0000000000001850       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .debug_info    0x0000000000001876       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .debug_info    0x00000000000005f4     0x11eb RTC_test.o
+ .debug_info    0x00000000000017df       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .debug_info    0x0000000000001805       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .debug_info    0x000000000000182b       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_info    0x0000000000001851       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .debug_info    0x0000000000001877       0x26 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
 .debug_abbrev   0x0000000000000000      0xa33
  *(.debug_abbrev)
@@ -590,15 +590,15 @@ END GROUP
  .debug_abbrev  0x0000000000000a0b       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
  .debug_abbrev  0x0000000000000a1f       0x14 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
-.debug_line     0x0000000000000000     0x1927
+.debug_line     0x0000000000000000     0x192b
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1d c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x000000000000001d     0x1599 RTC_test.o
- .debug_line    0x00000000000015b6       0x61 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
- .debug_line    0x0000000000001617       0x97 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
- .debug_line    0x00000000000016ae       0x85 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
- .debug_line    0x0000000000001733       0xfd c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
- .debug_line    0x0000000000001830       0xf7 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
+ .debug_line    0x000000000000001d     0x159d RTC_test.o
+ .debug_line    0x00000000000015ba       0x61 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_exit.o)
+ .debug_line    0x000000000000161b       0x97 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_copy_data.o)
+ .debug_line    0x00000000000016b2       0x85 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_clear_bss.o)
+ .debug_line    0x0000000000001737       0xfd c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_prologue.o)
+ .debug_line    0x0000000000001834       0xf7 c:/users/user/desktop/elec 291/project 2/avr-gcc-9.2.0-x64-mingw/avr-gcc-9.2.0-x64-mingw/bin/../lib/gcc/avr/9.2.0/avr5\libgcc.a(_epilogue.o)
 
 .debug_frame    0x0000000000000000      0x280
  *(.debug_frame)
